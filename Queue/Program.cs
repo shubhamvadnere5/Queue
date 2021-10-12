@@ -15,6 +15,9 @@ namespace Queue
             queue.Enqueue(30);
             queue.Enqueue(70);
             queue.display();
+            Console.WriteLine("\n");
+            queue.Dequeue();
+            queue.display();
             Console.ReadLine();
         }
     }

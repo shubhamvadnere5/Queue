@@ -39,10 +39,30 @@ namespace Queue
             Console.WriteLine("Inserted into list" + new_node.data); 
 
         }
+
+        /// <summary>
+        ///  Removes an item from the queue. The items are popped in the same order in which they are pushed. 
+        ///  If the queue is empty, 
+        ///  then it is said to be an Underflow condition. 
+        /// </summary>
+        public void Dequeue()
+        {
+            //if queue is empty then return null
+            if (this.head==null)
+            {
+                Console.WriteLine("The Queue is Empty"); 
+                return;
+            }
+            //store previous head and move head pointer one step ahead to delete the current element
+            Node temp = this.head;
+            this.head = this.head.next;
+            Console.WriteLine("Item deleted is {0}", temp.data);
+
+        }
+
         /// <summary>
         /// displaying the instance.
         /// </summary>
-        
         public void display()
         {
             Node temp = this.head;
