@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Queue
 {
+    /// <summary>
+    /// Queue means first in First out
+    /// </summary>
     
     class LinkListQueue
     {
@@ -18,20 +21,20 @@ namespace Queue
         public void Enqueue(int item)
         {
             Node new_node = new Node(item);
-            if (this.head==null)
+            if (this.head==null) //creating instance 
             {
-                this.head = new_node;
+                this.head = new_node; //if null then new node will assign for ex (56) will assign here
             }
             else
             {
                 Node temp = this.head;
-                while(temp.next !=null)
+                while(temp.next !=null) //if temp is not equal to null then it will go to the next node
                 {
                     temp = temp.next;
                 }
-                temp.next = new_node;
+                temp.next = new_node; //assigning new node for ex (30) will assign then after (70) will assign
             }
-            Console.WriteLine("Inserted into list" + new_node.data);
+            Console.WriteLine("Inserted into list" + new_node.data); 
 
         }
         /// <summary>
