@@ -8,8 +8,10 @@ namespace Queue
 {
     /// <summary>
     /// Queue means first in First out
+    ///  Enqueue Adds an item to the queue. If the queue is full, 
+    ///  then it is said to be an Overflow condition. 
     /// </summary>
-    
+
     class LinkListQueue
     {
         Node head;
